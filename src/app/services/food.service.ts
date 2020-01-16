@@ -14,7 +14,7 @@ export class FoodService {
     return this.httpClient.get<Array<Object>>(`${environment.backendUrl}/food`)
   }
 
-  getCuisinesByCategory(cuisine:String){
-    return this.httpClient.get<Array<Object>>(`${environment.backendUrl}/food/:${cuisine}`)
+  getCuisinesByCategory(category:String){
+    return this.httpClient.get<Array<Object>>(`${environment.backendUrl}/food/:${category}`)
   }
 }

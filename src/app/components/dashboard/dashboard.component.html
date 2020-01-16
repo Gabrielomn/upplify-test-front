@@ -1,0 +1,10 @@
+<div class="jumbotron">
+  <p>dashboard works!</p>
+</div>
+<div class="output">
+  <ul>
+    <li *ngFor="let item of this.state.cuisines">
+      <app-item [(data)] = item></app-item>
+    </li>
+  </ul>
+</div>
