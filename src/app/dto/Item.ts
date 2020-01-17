@@ -1,9 +1,11 @@
 export class Item{
-  public id: string
-  public title: string
-  public price: double
-  public cuisine: string
 
+  constructor(
+    public id: string,
+    public title: string,
+    public price: number,
+    public cuisine: string
+  ){ }
 
   public getId() : string {
     return this.id
@@ -13,7 +15,7 @@ export class Item{
     return this.title
   }
 
-  public getPrice() : double {
+  public getPrice() : number {
     return this.price
   }
 
