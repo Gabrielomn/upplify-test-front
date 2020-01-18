@@ -22,4 +22,9 @@ export class CartComponent implements OnInit {
   getCompras(){
     return this.compras
   }
+
+  getTotalValue(){
+    return this.compras.reduce((sum, item) => sum + item.getValue(), 0)
+
+  }
 }

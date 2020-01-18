@@ -1,4 +1,5 @@
 <h2>Your current order</h2>
+<p>Total amount: {{this.getTotalValue()}}</p>
 <div class="items">
   <app-compra *ngFor="let compra of this.getCompras()" [(data)]=compra></app-compra>
 </div>
