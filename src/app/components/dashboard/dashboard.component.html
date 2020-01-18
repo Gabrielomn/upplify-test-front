@@ -3,11 +3,14 @@
     <div class="form-group">
       <label class="col-form-label" for="inputDefault"></label>
       <input type="text" class="form-control" [(ngModel)]="query" placeholder="What are you looking for?" id="backendQuery">
-      <button type="button" class="btn btn-primary" (click)="this.sup()"><i class="material-icons">search</i></button>
+      <button type="button" class="btn btn-primary" (click)="this.searchForKeyword()"><i class="material-icons">search</i></button>
+    </div>
+    <div class="buttons">
+      <button *ngFor="let category of this.getOptions()" type="button" class="btn btn-primary" (click)="this.searchByCategory(category)">{{category.toLocaleUpperCase()}}</button>
     </div>
   </div>
 </div>
 
-<div class="output">
+<div id="output">
   <app-item *ngFor="let item of this.getCuisines()" [(data)] = item></app-item>
 </div>

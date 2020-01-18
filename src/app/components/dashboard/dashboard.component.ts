@@ -9,13 +9,21 @@ import { Item } from '../../dto/Item'
 })
 export class DashboardComponent implements OnInit {
   private cuisines: Array<Item>
+  private options: Array<string>
   public query:string
   constructor(private foodService:FoodService) {
     this.cuisines = []
+    this.options = [
+      "salad",
+      "burgers",
+      "pizza",
+      "chinese",
+      "beverage"
+    ]
   }
 
   ngOnInit() {
-    this.foodService.getCuisines().subscribe((data: any) => {
+    this.foodService.getCuisines().subscribe((data) => {
       this.cuisines = data.map((item) => new Item(item.id, item.title, item.price, item.cuisine))
     })
   }
@@ -24,7 +32,19 @@ export class DashboardComponent implements OnInit {
     return this.cuisines
   }
 
+  getOptions(){
+    return this.options
+  }
+
   searchForKeyword(){
-    //todo
+    this.foodService.getCuisinesBySubstring(this.query).subscribe((data) => {
+      this.cuisines = data.map((item) => new Item(item.id, item.title, item.price, item.cuisine))
+    })
+  }
+
+  searchByCategory(category:string){
+    this.foodService.getCuisinesByCategory(category).subscribe((data) => {
+      this.cuisines = data.map((item) => new Item(item.id, item.title, item.price, item.cuisine))
+    })
   }
 }

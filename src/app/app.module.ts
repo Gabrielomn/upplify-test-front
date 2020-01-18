@@ -5,16 +5,21 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ItemComponent } from './components/item/item.component';
 import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
+import { CartComponent } from './components/cart/cart.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    ItemComponent
+    ItemComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

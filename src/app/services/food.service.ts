@@ -10,11 +10,15 @@ export class FoodService {
 
   constructor(private httpClient:HttpClient) { }
 
-  getCuisines(){
+  getCuisines(): Observable<any>{
     return this.httpClient.get<Array<Object>>(`${environment.backendUrl}/food`)
   }
 
-  getCuisinesByCategory(category:String){
-    return this.httpClient.get<Array<Object>>(`${environment.backendUrl}/food/:${category}`)
+  getCuisinesByCategory(category:String): Observable<any>{
+    return this.httpClient.get<Array<Object>>(`${environment.backendUrl}/food/${category}`)
+  }
+
+  getCuisinesBySubstring(substring:String): Observable<any>{
+    return this.httpClient.get<Array<Object>>(`${environment.backendUrl}/food?substring=${substring}`)
   }
 }
