@@ -7,13 +7,15 @@ import { ItemComponent } from './components/item/item.component';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { CartComponent } from './components/cart/cart.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     ItemComponent,
-    CartComponent
+    CartComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
