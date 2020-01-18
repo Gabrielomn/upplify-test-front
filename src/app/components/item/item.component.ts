@@ -13,4 +13,8 @@ export class ItemComponent implements OnInit {
   ngOnInit() {
   }
 
+  addToCart(){
+    localStorage.setItem(this.data.title, JSON.stringify({title:this.data.title, price:this.data.price, amount:0}))
+  }
+
 }

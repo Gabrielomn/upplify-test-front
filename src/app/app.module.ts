@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { CartComponent } from './components/cart/cart.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { CompraComponent } from './components/compra/compra.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     DashboardComponent,
     ItemComponent,
     CartComponent,
-    NavbarComponent
+    NavbarComponent,
+    CompraComponent
   ],
   imports: [
     BrowserModule,

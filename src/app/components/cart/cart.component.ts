@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Compra } from '../../dto/Compra'
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+  private compras:Array<Compra>
+  constructor() {
+    // this.compras = []
   }
 
+  ngOnInit() {
+    this.compras = Object.values(localStorage).map((data) =>{
+      let item = JSON.parse(data)
+      return new Compra(item.title, item.price, item.amount)
+    })
+  }
+
+  getCompras(){
+    return this.compras
+  }
 }

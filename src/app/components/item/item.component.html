@@ -1,7 +1,9 @@
-<div class="card text-white bg-primary mb-3" style="max-width: 10rem; max-height: 12rem;">
+<div (click)="addToCart()" class="card text-white bg-primary mb-3" style="max-width: 20rem; max-height: 12rem;">
   <div class="card-header">{{this.data.title}}</div>
   <div class="card-body">
-    <h4 class="card-title">{{this.data.price}}</h4>
-    <p class="card-text">{{this.data.cuisine}}</p>
+    <p class="card-text">{{this.data.price}} U$</p>
+  </div>
+  <div class="card-footer">
+    {{this.data.cuisine}}
   </div>
 </div>
