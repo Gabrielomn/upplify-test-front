@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-
+import { Compra } from '../../dto/Compra'
 @Component({
   selector: 'app-compra',
   templateUrl: './compra.component.html',

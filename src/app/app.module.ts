@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { CartComponent } from './components/cart/cart.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CompraComponent } from './components/compra/compra.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -17,13 +18,14 @@ import { CompraComponent } from './components/compra/compra.component';
     ItemComponent,
     CartComponent,
     NavbarComponent,
-    CompraComponent
+    CompraComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

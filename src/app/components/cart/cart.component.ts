@@ -27,4 +27,9 @@ export class CartComponent implements OnInit {
     return this.compras.reduce((sum, item) => sum + item.getValue(), 0)
 
   }
+
+  confirmPurchase(){
+    localStorage.clear()
+    this.ngOnInit()
+  }
 }
