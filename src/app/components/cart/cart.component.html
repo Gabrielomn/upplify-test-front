@@ -3,7 +3,7 @@
   <app-compra *ngFor="let compra of this.getCompras()" [(data)]=compra></app-compra>
 </div>
 <h5>Total amount: {{this.getTotalValue().toFixed(2)}} U$</h5>
-<button id="checkoutButton" type="button" class="btn btn-primary" data-toggle="modal" data-target="#checkoutModal">
+<button id="checkoutButton" type="button" class="btn btn-primary" data-toggle="modal" data-target="#checkoutModal" [disabled]="this.getCompras().length == 0">
   Proceed to checkout
 </button>
 

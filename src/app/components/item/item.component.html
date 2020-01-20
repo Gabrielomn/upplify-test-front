@@ -1,9 +1,34 @@
 <div (click)="this.addToCart()" class="card border-primary mb-3">
   <div class="card-header">{{this.data.title}}</div>
   <div class="card-body">
-    <p class="card-text">{{this.data.getPrice()}} U$</p>
+    <p class="card-text">{{this.data.getPrice().toFixed(2)}} U$</p>
   </div>
   <div class="card-footer">
     {{this.data.cuisine}}
   </div>
 </div>
+
+<div class="sucessMsg">
+  <div class="row"  *ngIf="showMsg">
+    <div class="col-xs-12">
+      <div class="alert alert-success">
+        <p>Item added!</p>
+        <a href="/cart">Click here to go to cart.</a>
+      </div>
+      <!-- <p class="alert alert-success"><p></p><a href="/cart"> Please click here to go to cart.</a></p> -->
+    </div>
+  <div>
+</div>
+
+<div class="sucessMsg">
+  <div class="row"  *ngIf="showMsgFail">
+    <div class="col-xs-12">
+      <div class="alert alert-success">
+        <p>Item added!</p>
+        <a href="/cart">Click here to go to cart.</a>
+      </div>
+      <!-- <p class="alert alert-success"><p></p><a href="/cart"> Please click here to go to cart.</a></p> -->
+    </div>
+  <div>
+</div>
+

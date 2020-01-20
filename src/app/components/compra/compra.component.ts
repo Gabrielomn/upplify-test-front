@@ -8,7 +8,10 @@ import { Compra } from '../../dto/Compra'
 export class CompraComponent implements OnInit {
 
   @Input() data: Compra
-  constructor() { }
+  public showMsg:boolean
+  constructor() {
+    this.showMsg = false;
+  }
 
   ngOnInit() {
   }
@@ -19,9 +22,16 @@ export class CompraComponent implements OnInit {
   }
 
   decrease(){
-    if(this.data.amount > 0){
+    if(this.data.amount > 1){
       this.data.amount-= 1
       localStorage.setItem(this.data.title, JSON.stringify(this.data))
+    }else{
+      localStorage.removeItem(this.data.title)
+      this.showMsg = true
+      setTimeout(() => {
+        this.showMsg = false
+      }, 2000);
+      window.location.reload()
     }
   }
 

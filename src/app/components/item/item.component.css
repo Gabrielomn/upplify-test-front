@@ -6,3 +6,19 @@
 .card-text{
   text-align: end;
 }
+
+.sucessMsg{
+  position: fixed;
+  left:50%;
+  top:10%;
+  transform: translate(-50%, 0%);
+  min-width: min-content;
+}
+
+.failMsg{
+  position: fixed;
+  left:50%;
+  top:10%;
+  transform: translate(-50%, 0%);
+  min-width: min-content;
+}

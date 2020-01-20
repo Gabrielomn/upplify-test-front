@@ -7,14 +7,24 @@ import { Item } from '../../dto/Item'
 })
 export class ItemComponent implements OnInit {
   @Input() data: Item
-
-  constructor() { }
+  public showMsg:boolean
+  public showMsgFail:boolean
+  constructor() {
+    this.showMsg= false
+    this.showMsgFail= false
+  }
 
   ngOnInit() {
   }
 
   addToCart(){
-    localStorage.setItem(this.data.title, JSON.stringify({title:this.data.title, price:this.data.price, amount:1}))
+    if(!localStorage.getItem(this.data.title)){
+      localStorage.setItem(this.data.title, JSON.stringify({title:this.data.title, price:this.data.price, amount:1}))
+      this.showMsg = true
+      setTimeout(() => {
+        this.showMsg = false
+      }, 2000);
+    }
   }
 
 }
