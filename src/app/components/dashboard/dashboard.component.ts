@@ -11,6 +11,7 @@ export class DashboardComponent implements OnInit {
   private cuisines: Array<Item>
   private options: Array<string>
   public query:string
+  private delaySearch: any
   constructor(private foodService:FoodService) {
     this.cuisines = []
     this.options = [
@@ -24,7 +25,7 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.searchAll()
+    this.searchForKeyword()
   }
 
   getCuisines(){
@@ -35,17 +36,21 @@ export class DashboardComponent implements OnInit {
     return this.options
   }
 
-  searchAll(){
-    this.foodService.getCuisines().subscribe((data) => {
-      this.cuisines = data.map((item) => new Item(item.id, item.title, item.price, item.cuisine))
-    })
-  }
-
   searchForKeyword(){
     this.foodService.getCuisinesBySubstring(this.query).subscribe((data) => {
       this.cuisines = data.map((item) => new Item(item.id, item.title, item.price, item.cuisine))
     })
-    this.query=""
+  }
+
+  searchForKeywordOnDelay(){
+    clearTimeout(this.delaySearch)
+    this.delaySearch = setTimeout(this.searchForKeyword.bind(this), 1200);
+  }
+
+  searchForKeywordWithoutDelay(){
+    clearTimeout(this.delaySearch)
+    this.searchForKeyword()
+    this.query = ""
   }
 
   searchByCategory(category:string){
