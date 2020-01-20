@@ -7,3 +7,12 @@
   flex-direction: row;
   justify-content: space-between;
 }
+
+#cartTitle{
+  text-align: center;
+  margin:20px;
+}
+
+#checkoutButton{
+  align-self: flex-end;
+}

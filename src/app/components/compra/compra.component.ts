@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { Compra } from '../../dto/Compra'
 @Component({
   selector: 'app-compra',
@@ -8,7 +8,6 @@ import { Compra } from '../../dto/Compra'
 export class CompraComponent implements OnInit {
 
   @Input() data: Compra
-
   constructor() { }
 
   ngOnInit() {
@@ -24,5 +23,9 @@ export class CompraComponent implements OnInit {
       this.data.amount-= 1
       localStorage.setItem(this.data.title, JSON.stringify(this.data))
     }
+  }
+
+  getTotalValue(){
+    return this.data.getValue().toFixed(2)
   }
 }

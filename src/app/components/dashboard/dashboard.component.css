@@ -1,0 +1,59 @@
+#output{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+@media (max-width: 600px)
+{
+  .dashboard{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .control{
+    max-width: 100%;
+  }
+}
+
+.textInput{
+  display:flex;
+  flex-direction: row;
+  max-width: 25rem;
+}
+
+.textInput button, .textInput input{
+  height: 40px;
+}
+
+.control{
+  margin: 10px 0;
+  padding: 10px;
+  display:flex;
+  flex-direction: column;
+}
+
+#submit{
+  border-color: white;
+  border-width: 1px;
+  margin-left: 2px;
+}
+
+.buttons{
+  display:flex;
+  flex-direction: row;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  max-width: 30rem;
+}
+
+.buttons::-webkit-scrollbar {
+  display: none;
+}
+
+.button{
+  width: min-content;
+}
+

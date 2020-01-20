@@ -1,5 +1,6 @@
 .card{
   cursor: pointer;
+  width: 16rem;
 }
 
 .card-text{

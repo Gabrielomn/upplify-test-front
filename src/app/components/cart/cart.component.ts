@@ -8,9 +8,7 @@ import { Compra } from '../../dto/Compra'
 export class CartComponent implements OnInit {
 
   private compras:Array<Compra>
-  constructor() {
-    // this.compras = []
-  }
+  constructor() { }
 
   ngOnInit() {
     this.compras = Object.values(localStorage).map((data) =>{

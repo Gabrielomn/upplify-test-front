@@ -1,7 +1,7 @@
-<div (click)="addToCart()" class="card text-white bg-primary mb-3" style="max-width: 22rem; max-height: 12rem;">
+<div (click)="this.addToCart()" class="card border-primary mb-3">
   <div class="card-header">{{this.data.title}}</div>
   <div class="card-body">
-    <p class="card-text">{{this.data.price}} U$</p>
+    <p class="card-text">{{this.data.getPrice()}} U$</p>
   </div>
   <div class="card-footer">
     {{this.data.cuisine}}

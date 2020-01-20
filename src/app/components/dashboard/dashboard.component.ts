@@ -20,12 +20,11 @@ export class DashboardComponent implements OnInit {
       "chinese",
       "beverage"
     ]
+    this.query=""
   }
 
   ngOnInit() {
-    this.foodService.getCuisines().subscribe((data) => {
-      this.cuisines = data.map((item) => new Item(item.id, item.title, item.price, item.cuisine))
-    })
+    this.searchAll()
   }
 
   getCuisines(){
@@ -36,10 +35,17 @@ export class DashboardComponent implements OnInit {
     return this.options
   }
 
+  searchAll(){
+    this.foodService.getCuisines().subscribe((data) => {
+      this.cuisines = data.map((item) => new Item(item.id, item.title, item.price, item.cuisine))
+    })
+  }
+
   searchForKeyword(){
     this.foodService.getCuisinesBySubstring(this.query).subscribe((data) => {
       this.cuisines = data.map((item) => new Item(item.id, item.title, item.price, item.cuisine))
     })
+    this.query=""
   }
 
   searchByCategory(category:string){

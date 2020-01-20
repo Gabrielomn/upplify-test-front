@@ -1,14 +1,14 @@
-<h2>Your current order</h2>
-<p>Total amount: {{this.getTotalValue()}}</p>
+<h2 id="cartTitle">Your current order</h2>
 <div class="items">
   <app-compra *ngFor="let compra of this.getCompras()" [(data)]=compra></app-compra>
 </div>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+<h5>Total amount: {{this.getTotalValue().toFixed(2)}} U$</h5>
+<button id="checkoutButton" type="button" class="btn btn-primary" data-toggle="modal" data-target="#checkoutModal">
   Proceed to checkout
 </button>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- Checkout Modal -->
+<div class="modal fade" id="checkoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -20,9 +20,9 @@
       <div class="modal-body">
         <div class="item" *ngFor="let compra of this.getCompras()">
           <p>{{compra.title}} x{{compra.amount}}</p>
-          <p>{{compra.getValue()}} U$</p>
+          <p>{{compra.getValue().toFixed(2)}} U$</p>
         </div>
-        <p style="text-align:end">Total: {{this.getTotalValue()}} U$</p>
+        <p style="text-align:end">Total: {{this.getTotalValue().toFixed(2)}} U$</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
