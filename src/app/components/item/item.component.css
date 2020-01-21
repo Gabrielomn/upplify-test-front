@@ -11,25 +11,20 @@
   text-align: end;
 }
 
-.sucessMsg{
+.sucessMsg, .failMsg{
   position: fixed;
   left:50%;
   top:10%;
   transform: translate(-50%, 0%);
-  min-width: min-content;
+  /* min-width: min-content; */
+  z-index: 2;
 }
 
-.failMsg{
-  position: fixed;
-  left:50%;
-  top:10%;
-  transform: translate(-50%, 0%);
-  min-width: min-content;
+.failMsg div,.sucessMsg div{
+  width: max-content;
 }
 
 .card:hover{
-
   border-width: 2px;
-
   padding: 0;
 }

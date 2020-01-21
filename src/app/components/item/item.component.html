@@ -8,26 +8,29 @@
   </div>
 </div>
 
-<div class="sucessMsg">
-  <div class="row"  *ngIf="showMsg">
-    <div class="col-xs-12">
-      <div class="alert alert-success">
-        <p>Item added!</p>
-        <a href="/cart">Click here to go to cart.</a>
+<div id="msgs">
+  <div class="sucessMsg">
+    <div class="row"  *ngIf="showMsg">
+      <div class="col-xs-12">
+        <div class="alert alert-success">
+          <p>Item added!</p>
+          <a href="/cart">Click here to go to cart.</a>
+        </div>
       </div>
-      <!-- <p class="alert alert-success"><p></p><a href="/cart"> Please click here to go to cart.</a></p> -->
-    </div>
-  <div>
+    <div>
+  </div>
 </div>
 
-<div class="sucessMsg">
+<!-- At first this class was at the same div as sucessMsg, but for
+some reason it wouldn't work when both were at the same height in the DOM
+i think it might have some to do it with the *ngIf directive-->
+<div class="failMsg">
   <div class="row"  *ngIf="showMsgFail">
-    <div class="col-xs-12">
-      <div class="alert alert-success">
-        <p>Item added!</p>
-        <a href="/cart">Click here to go to cart.</a>
+    <div class="col-md-6">
+      <div class="alert alert-warning">
+        <p>Item already in cart!</p>
+        <a href="/cart">You can go to cart and remove it.</a>
       </div>
-      <!-- <p class="alert alert-success"><p></p><a href="/cart"> Please click here to go to cart.</a></p> -->
     </div>
   <div>
 </div>
