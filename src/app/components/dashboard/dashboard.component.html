@@ -1,13 +1,12 @@
 <div class="dashboard">
   <div class="control bg-primary">
     <div class="form-group textInput">
-      <label class="col-form-label" for="inputDefault"></label>
       <input type="text" class="form-control" [(ngModel)]="query" placeholder="Search" id="backendQuery" (ngModelChange)="this.searchForKeywordOnDelay()">
       <button type="button" id="submit" class="btn btn-primary" (click)="this.searchForKeywordWithoutDelay()"><i class="material-icons">search</i></button>
     </div>
 
     <div class="buttons">
-      <button *ngFor="let category of this.getOptions()" type="button" (click)="this.searchByCategory(category)" class="button btn btn-secondary">{{category.toUpperCase()}}</button>
+      <button *ngFor="let category of this.getOptions()" type="button" (click)="this.searchByCategory(category)" class="btn btn-secondary">{{category.toUpperCase()}}</button>
       <button type="button" (click)="this.searchForKeyword()" class="button btn btn-secondary">ETC</button>
     </div>
   </div>

@@ -1,6 +1,10 @@
 .card{
   cursor: pointer;
   width: 16rem;
+  border-style: solid;
+  border-width: 1px;
+  padding: 1px 1px;
+  box-sizing: border-box;
 }
 
 .card-text{
@@ -21,4 +25,11 @@
   top:10%;
   transform: translate(-50%, 0%);
   min-width: min-content;
+}
+
+.card:hover{
+
+  border-width: 2px;
+
+  padding: 0;
 }

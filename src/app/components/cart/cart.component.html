@@ -1,10 +1,13 @@
-<h2 id="cartTitle">Your current order</h2>
-<div class="items">
-  <app-cart-item *ngFor="let compra of this.getCompras()" [(data)]=compra></app-cart-item>
+<div class="checkout">
+  <h2 id="cartTitle">Your current order</h2>
+  <div class="items">
+    <app-cart-item *ngFor="let compra of this.getCompras()" [(data)]=compra></app-cart-item>
+  </div>
+  <h5>Total amount: {{this.getTotalValue().toFixed(2)}} U$</h5>
+  <button id="checkoutButton" type="button" class="btn btn-primary" data-toggle="modal" data-target="#checkoutModal" [disabled]="this.getCompras().length == 0">
+    Proceed to checkout
+  </button>
 </div>
-<h5>Total amount: {{this.getTotalValue().toFixed(2)}} U$</h5>
-<button id="checkoutButton" type="button" class="btn btn-primary" data-toggle="modal" data-target="#checkoutModal" [disabled]="this.getCompras().length == 0">
-  Proceed to checkout
-</button>
+
 
 <app-checkout class="modal fade" id="checkoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" [compras]=this.getCompras()></app-checkout>

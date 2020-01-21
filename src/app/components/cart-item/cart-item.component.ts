@@ -37,6 +37,6 @@ export class CartItemComponent implements OnInit {
   }
 
   getTotalValue(){
-    return this.data.getValue().toFixed(2)
+    return this.data.getValue()
   }
 }

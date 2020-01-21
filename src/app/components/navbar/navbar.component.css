@@ -3,3 +3,21 @@ nav{
   flex-direction: row;
   justify-content: flex-end;
 }
+
+h3{
+  margin-right: auto;
+  color:white;
+}
+
+@media screen and (max-device-width: 420px){
+  h3{
+    width: 0;
+    overflow: hidden;
+    display: none;
+  }
+
+  nav{
+    justify-content: space-around;
+  }
+
+}

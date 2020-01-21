@@ -1,7 +1,7 @@
 <div class="card border-secondary mb-3">
   <div class="card-header myCardHeader">
     <p>{{this.data.title}}</p>
-    <p>{{this.data.price}} U$</p>
+    <p>{{this.data.price.toFixed(2)}} U$</p>
   </div>
   <div class="card-body">
     <div class="amountControl">
@@ -11,7 +11,7 @@
     </div>
   </div>
   <div class="card-footer">
-    <p>Total for this item: {{this.getTotalValue()}}</p>
+    <p>Total for this item: {{this.getTotalValue().toFixed(2)}} U$</p>
   </div>
 </div>
 

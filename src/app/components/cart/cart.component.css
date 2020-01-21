@@ -16,3 +16,10 @@
 #checkoutButton{
   align-self: flex-end;
 }
+
+.checkout{
+  border-width: 1px;
+  border-style: solid;
+  padding: 10px;
+  box-sizing: border-box;
+}
