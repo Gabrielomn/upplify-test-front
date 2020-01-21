@@ -3,11 +3,12 @@ import { FoodService }  from '../../services/food.service'
 import { Item } from '../../dto/Item'
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'app-menu',
+  templateUrl: './menu.component.html',
+  styleUrls: ['./menu.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class MenuComponent implements OnInit {
+
   private cuisines: Array<Item>
   private options: Array<string>
   public query:string
