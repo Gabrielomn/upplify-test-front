@@ -8,8 +8,8 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { CartComponent } from './components/cart/cart.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { CompraComponent } from './components/compra/compra.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { CartItemComponent } from './components/cart-item/cart-item.component';
 
 @NgModule({
   declarations: [
@@ -18,8 +18,8 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     ItemComponent,
     CartComponent,
     NavbarComponent,
-    CompraComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    CartItemComponent
   ],
   imports: [
     BrowserModule,

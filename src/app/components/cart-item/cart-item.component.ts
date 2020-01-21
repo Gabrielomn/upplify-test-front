@@ -1,11 +1,12 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { Compra } from '../../dto/Compra'
+
 @Component({
-  selector: 'app-compra',
-  templateUrl: './compra.component.html',
-  styleUrls: ['./compra.component.css']
+  selector: 'app-cart-item',
+  templateUrl: './cart-item.component.html',
+  styleUrls: ['./cart-item.component.css']
 })
-export class CompraComponent implements OnInit {
+export class CartItemComponent implements OnInit {
 
   @Input() data: Compra
   public showMsg:boolean

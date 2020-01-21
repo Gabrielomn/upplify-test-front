@@ -1,6 +1,6 @@
 <h2 id="cartTitle">Your current order</h2>
 <div class="items">
-  <app-compra *ngFor="let compra of this.getCompras()" [(data)]=compra></app-compra>
+  <app-cart-item *ngFor="let compra of this.getCompras()" [(data)]=compra></app-cart-item>
 </div>
 <h5>Total amount: {{this.getTotalValue().toFixed(2)}} U$</h5>
 <button id="checkoutButton" type="button" class="btn btn-primary" data-toggle="modal" data-target="#checkoutModal" [disabled]="this.getCompras().length == 0">
