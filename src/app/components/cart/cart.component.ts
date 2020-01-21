@@ -23,11 +23,6 @@ export class CartComponent implements OnInit {
 
   getTotalValue(){
     return this.compras.reduce((sum, item) => sum + item.getValue(), 0)
-
   }
 
-  confirmPurchase(){
-    localStorage.clear()
-    this.ngOnInit()
-  }
 }
