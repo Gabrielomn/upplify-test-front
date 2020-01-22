@@ -1,7 +1,10 @@
 <div (click)="this.addToCart()" class="card border-primary mb-3">
   <div class="card-header">{{this.data.title}}</div>
   <div class="card-body">
-    <p class="card-text">{{this.data.getPrice().toFixed(2)}} U$</p>
+    <img height="100%" width="50%" src="{{this.data.imageLink}}">
+    <div class="myCardText">
+      <p class="card-text">{{this.data.getPrice().toFixed(2)}} U$</p>
+    </div>
   </div>
   <div class="card-footer">
     {{this.data.cuisine}}

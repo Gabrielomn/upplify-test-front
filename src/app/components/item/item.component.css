@@ -1,14 +1,25 @@
 .card{
+  height: 200px;
   cursor: pointer;
-  width: 16rem;
+  min-width: 16rem;
+  max-width: 24rem;
   border-style: solid;
   border-width: 1px;
   padding: 1px 1px;
   box-sizing: border-box;
 }
 
-.card-text{
-  text-align: end;
+.card-body{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.myCardText{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .sucessMsg, .failMsg{

@@ -1,7 +1,7 @@
 export class Item{
 
   constructor(public id: string, public title: string,
-  public price: number, public cuisine: string){
+  public price: number, public cuisine: string, public imageLink:string){
   }
 
   public getId() : string {

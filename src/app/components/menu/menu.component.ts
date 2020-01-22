@@ -39,7 +39,7 @@ export class MenuComponent implements OnInit {
 
   searchForKeyword(){
     this.foodService.getCuisinesBySubstring(this.query).subscribe((data) => {
-      this.cuisines = data.map((item) => new Item(item.id, item.title, item.price, item.cuisine))
+      this.cuisines = data.map((item) => new Item(item.id, item.title, item.price, item.cuisine, item.imageLink))
     })
   }
 
@@ -56,7 +56,7 @@ export class MenuComponent implements OnInit {
 
   searchByCategory(category:string){
     this.foodService.getCuisinesByCategory(category).subscribe((data) => {
-      this.cuisines = data.map((item) => new Item(item.id, item.title, item.price, item.cuisine))
+      this.cuisines = data.map((item) => new Item(item.id, item.title, item.price, item.cuisine, item.imageLink))
     })
   }
 }
