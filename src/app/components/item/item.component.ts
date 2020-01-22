@@ -24,7 +24,7 @@ export class ItemComponent implements OnInit {
       setTimeout(() => {
         this.showMsg = false
       }, 2000);
-    }else{
+    }else if(!this.showMsg){
       this.showMsgFail = true
       setTimeout(() => {
         this.showMsgFail = false

@@ -16,8 +16,18 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)=this.confirmPurchase() >Confirm</button>
+        <button type="button" class="btn btn-primary" (click)=this.confirmPurchase() >Confirm</button>
       </div>
     </div>
   </div>
+</div>
+
+<div class="sucessMsg">
+  <div class="row"  *ngIf="showMsg">
+    <div class="col-xs-12">
+      <div class="alert alert-success">
+        <p>Your order has been placed, thanks for the preference!</p>
+      </div>
+    </div>
+  <div>
 </div>

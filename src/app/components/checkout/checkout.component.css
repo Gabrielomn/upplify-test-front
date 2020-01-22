@@ -1,0 +1,11 @@
+.sucessMsg, .failMsg{
+  position: fixed;
+  left:50%;
+  top:10%;
+  transform: translate(-50%, 0%);
+  z-index: 2;
+}
+
+.failMsg div,.sucessMsg div{
+  width: max-content;
+}

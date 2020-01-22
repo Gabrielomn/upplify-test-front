@@ -9,7 +9,7 @@ import { Compra } from '../../dto/Compra'
 export class CheckoutComponent implements OnInit {
 
   @Input() compras: Array<Compra>
-
+  public showMsg:boolean
   constructor() { }
 
   ngOnInit() {
@@ -21,8 +21,13 @@ export class CheckoutComponent implements OnInit {
 
   confirmPurchase(){
     localStorage.clear()
-    window.location.reload()
+    this.showMsg = true
+    setTimeout(() => {
+      this.showMsg = false
+      window.location.reload()
+    }, 2000);
   }
+
 
   getCompras(){
     return this.compras
