@@ -12,7 +12,8 @@
   </div>
 
   <div id="output">
-    <app-item *ngFor="let item of this.getCuisines()" [(data)] = item></app-item>
+    <app-item *ngFor="let item of this.getCuisines();let i = index;" [(data)] = this.getCuisines()[i]></app-item>
   </div>
+
 </div>
 
